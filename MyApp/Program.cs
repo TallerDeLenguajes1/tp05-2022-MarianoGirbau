@@ -29,38 +29,43 @@ Console.WriteLine("El numero invertido es: " + Ninv);*/
 
 
 
-string numero1,numero2,menu;
-double N1=0,N2=0;
+string numero1,menu;
+double N1=0;
 double resultado=0;
 do
 {
     Console.WriteLine("¿Que operacion desea realizar?");
-    Console.WriteLine("\n1.Suma\n2.Resta\n3.Multiplicar\n4.Dividir");
+    Console.WriteLine("1.Valor absoluto\n2.Cuadrado\n3.Raiz cuadrada\n4.Seno\n5.Coseno\n6.Parte entera");
     int flag = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Ingrese un numero:");
     numero1 = Console.ReadLine();
     N1 = Convert.ToDouble(numero1);
-    Console.WriteLine("Ingrese otro numero:");
-    numero2 = Console.ReadLine();
-    N2 = Convert.ToDouble(numero2);
-    
     switch (flag)
     {
         case 1:
-            resultado=N1+N2;
+            resultado=Math.Abs(N1);
         break;
 
         case 2:
-            resultado=N1-N2;
+            resultado=Math.Pow(N1,2);
         break;
 
         case 3:
-            resultado=N1*N2;
+            resultado=Math.Sqrt(N1);
         break;
 
         case 4:
-            resultado=N1/N2; 
+            resultado=Math.Sin(N1); 
         break;
+        
+        case 5:
+            resultado=Math.Cos(N1);
+        break;
+
+        case 6:
+            resultado=Math.Truncate(N1); //Calcula la parte entera de un número de punto flotante de precisión doble especificado.
+        break;
+
         default:
             Console.WriteLine("Error");
         break;
