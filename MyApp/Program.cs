@@ -30,34 +30,35 @@ Console.WriteLine("El numero invertido es: " + Ninv);*/
 
 
 string numero1,numero2,menu;
-double N1,N2;
+double N1=0,N2=0;
 double resultado=0;
 do
 {
-    Console.WriteLine("Ingrese un numero:");
-    numero1 = Console.ReadLine();
-    Console.WriteLine("Ingrese otro numero:");
-    numero2 = Console.ReadLine();
-    N1 = Convert.ToDouble(numero1);
-    N2 = Convert.ToDouble(numero2);
     Console.WriteLine("¿Que operacion desea realizar?");
     Console.WriteLine("\n1.Suma\n2.Resta\n3.Multiplicar\n4.Dividir");
-    string flag = Console.ReadLine();
+    int flag = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Ingrese un numero:");
+    numero1 = Console.ReadLine();
+    N1 = Convert.ToDouble(numero1);
+    Console.WriteLine("Ingrese otro numero:");
+    numero2 = Console.ReadLine();
+    N2 = Convert.ToDouble(numero2);
+    
     switch (flag)
     {
-        case "1":
+        case 1:
             resultado=N1+N2;
         break;
 
-        case "2":
+        case 2:
             resultado=N1-N2;
         break;
 
-        case "3":
+        case 3:
             resultado=N1*N2;
         break;
 
-        case "4":
+        case 4:
             resultado=N1/N2; 
         break;
         default:
