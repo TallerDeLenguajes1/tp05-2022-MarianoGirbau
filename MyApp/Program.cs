@@ -74,3 +74,10 @@ do
     Console.WriteLine("¿Desea realizar otra opreacion? 1.Si 2.No");
     menu = Console.ReadLine();
 } while (menu=="1");
+
+Console.WriteLine("Ingrese dos numeros para comparar: ");
+int NComp1 = Convert.ToInt32(Console.ReadLine());
+int NComp2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("El mayor de los numeros es: " + Math.Max(NComp1,NComp2));
+Console.WriteLine("El mayor de los numeros es: " + Math.Min(NComp1,NComp2));
