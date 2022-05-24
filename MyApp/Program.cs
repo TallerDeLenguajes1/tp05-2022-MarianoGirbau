@@ -32,15 +32,17 @@ do
 {
     Console.WriteLine("¿Que operacion desea realizar?");
     Console.WriteLine("\n1.Suma\n2.Resta\n3.Multiplicar\n4.Dividir");
-    Console.WriteLine("5.Valor absoluto\n6.Cuadrado\n7.Raiz cuadrada\n8.Seno\n9.Coseno\n10.Parte entera");
+    Console.WriteLine("5.Valor absoluto\n6.Cuadrado\n7.Raiz cuadrada\n8.Seno\n9.Coseno\n10.Parte entera\n=================");
     int flag = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Ingrese un numero:");
     numero1 = Console.ReadLine();
     N1 = Convert.ToDouble(numero1);
-    Console.WriteLine("Ingrese otro numero:");
-    numero2 = Console.ReadLine();
-    N2 = Convert.ToDouble(numero2);
-    
+    if (flag>=1 && flag<=4)
+    {
+        Console.WriteLine("Ingrese otro numero:");
+        numero2 = Console.ReadLine();
+        N2 = Convert.ToDouble(numero2);
+    }
     switch (flag)
     {
         case 1:
@@ -97,4 +99,4 @@ int NComp1 = Convert.ToInt32(Console.ReadLine());
 int NComp2 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("El mayor de los numeros es: " + Math.Max(NComp1,NComp2));
-Console.WriteLine("El mayor de los numeros es: " + Math.Min(NComp1,NComp2));
+Console.WriteLine("El menor de los numeros es: " + Math.Min(NComp1,NComp2));
